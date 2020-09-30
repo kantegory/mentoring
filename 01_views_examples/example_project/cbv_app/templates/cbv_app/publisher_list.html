@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publisher list</title>
+</head>
+
+<body>
+  <span><h1>Publishers</h1><a href="/publisher/create/">Add new one</a></span>
+  <ul>
+    {% for publisher in object_list %}
+    <li><strong>Name:</strong> {{ publisher }}, actions: <a href="/publisher/{{ publisher.id }}/update/">Edit</a> | <a href="/publisher/{{ publisher.id }}/delete/">Delete</a> | <a href="/publisher/{{ publisher.id }}/">Detail</a> 
+      <p><strong>Birthday date:</strong> {{ publisher.birthdate }}</p>
+    </li>
+    {% empty %}
+    <li>No Publishers yet.</li>
+    {% endfor %}
+  </ul>
+</body>
+
+</html>
