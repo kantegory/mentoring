@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
@@ -34,6 +34,7 @@ class PublisherCreateView(CreateView):
 
 class PublisherDeleteView(DeleteView):
   model = Publisher
+  success_url = '/publisher/list/'
 
 
 class BookRetrieveView(DetailView):
@@ -42,6 +43,23 @@ class BookRetrieveView(DetailView):
 
 class BookListView(ListView):
   model = Book
+  queryset = model.objects.all()
+
+  def get_queryset(self):
+    publisher = self.request.GET.get('publisher')
+    
+    if publisher:
+
+      try:
+        publisher = int(publisher)
+        queryset = self.queryset.filter(publisher=publisher)
+
+      except ValueError:
+        queryset = self.model.objects.none()
+
+      return queryset
+
+    return self.queryset
 
 
 class BookUpdateView(UpdateView):
@@ -58,3 +76,4 @@ class BookCreateView(CreateView):
 
 class BookDeleteView(DeleteView):
   model = Book
+  success_url = '/book/list/'
