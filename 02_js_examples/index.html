@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Examples</title>
+</head>
+<style>
+  form, .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form, .preview {
+    gap: 2rem;
+    width: 35%;
+    margin: auto;
+    padding: 2rem 2.25rem;
+    border: 1.5px solid #a19f9f;
+    border-radius: 5px;
+  }
+
+  .form-group {
+    gap: 0.5rem;
+  }
+
+  textarea {
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  input, textarea {
+    padding: 0.75rem 0.5rem;
+    border-radius: 5px;
+    border: 1.5px solid #a19f9f;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  input:focus, textarea:focus {
+    border: 1.5px solid #52a8d5;
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+  }
+
+  form {
+    order: 2;
+  }
+
+  .preview {
+    order: 1
+  }
+
+  .btn {
+    width: 50%;
+    margin: auto;
+  }
+</style>
+<body>
+  <main class="form-wrapper">
+    <form onsubmit="submitComment()">
+      <div class="form-group">
+        <label for="email">Адрес электронной почты:</label>
+        <input class="form-input" onkeyup="saveForm(this)" type="email" name="email" id="email" placeholder="email@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="comment">Комментарий:</label>
+        <textarea class="form-input" onkeyup="saveForm(this)" name="comment" id="comment" placeholder="Текст комментария"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Фамилия:</label>
+        <input class="form-input" onkeyup="saveForm(this)" type="text" name="lastName" id="lastName" placeholder="Иванов">
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">Имя:</label>
+        <input class="form-input" onkeyup="saveForm(this)" type="text" name="firstName" id="firstName" placeholder="Иван">
+      </div>
+
+      <div class="form-group">
+        <label for="middleName">Отчество:</label>
+        <input class="form-input" onkeyup="saveForm(this)" type="text" name="middleName" id="middleName" placeholder="Иванович">
+      </div>
+
+      <div class="form-group">
+        <button class="btn" type="submit">Отправить</button>
+        <button class="btn" type="reset">Сбросить</button>
+      </div>
+
+    </form>
+
+    <div class="preview">
+      <p id="previewTitle">Вот так будет выглядеть ваш комментарий:</p>
+
+      <div id="previewContent">
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript">
+    const previewContent = document.querySelector("#previewContent");
+    const form = document.querySelector("form");
+
+    const inputs = Array.from(document.querySelectorAll("form .form-group .form-input")).map((input) => {
+      return input.id
+    });
+
+    const defaultPreviewContent = `
+      <div>
+        Email автора:
+        <p id="emailPreview"></p>
+      </div>
+      <div>
+        Имя:
+        <p>
+          <span id="lastNamePreview"></span>
+          <span id="firstNamePreview"></span>
+          <span id="middleNamePreview"></span>
+        </p>
+      </div>
+      <div>
+        Текст комментария:
+        <p id="commentPreview"></p>
+      </div>
+    `;
+
+    const getDefaultPreview = () => {
+      previewContent.innerHTML = localStorage.getItem('defaultPreview') || defaultPreviewContent;
+    }
+
+    const submitComment = () => {
+      this.event.preventDefault();
+
+      form.reset();
+
+      document.querySelector('#previewTitle').innerHTML = "Ваш комментарий";
+    }
+
+    const resetComment = () => {
+      // previewContent.innerHTML = defaultPreviewContent;
+      localStorage.clear();
+      getDefaultPreview();
+    }
+
+    const saveForm = (_this) => {
+      console.log("THIS ELEMENT:", _this);
+      previewContent
+        .querySelector(`#${_this.id}Preview`)
+        .innerHTML = _this.value;
+      
+      // sessionStorage.setItem(_this.id, _this.value);
+      localStorage.setItem(_this.id, _this.value);
+      localStorage.setItem('defaultPreview', previewContent.innerHTML);
+    }
+
+    const getFormData = () => {
+      for (const key of inputs) {
+        document.querySelector(`#${key}`).value = localStorage.getItem(key)
+      }
+    }
+
+    // document.querySelector("button[type='reset']").addEventListener("click", () => {
+    //   resetComment();
+    // })
+
+    // document.querySelector("form").addEventListener("submit", () => {
+    //   submitComment();
+    // })
+
+    document.addEventListener("DOMContentLoaded", () => {
+      getDefaultPreview();
+
+      getFormData();
+    })
+  </script>
+</body>
+</html>
