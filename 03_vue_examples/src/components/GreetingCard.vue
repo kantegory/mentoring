@@ -1,5 +1,9 @@
 <template>
-  <h1>Привет, {{ username }}!</h1>
+  <h1>
+    Привет,
+    <span v-if="username">{{ username }}</span>
+    <span v-else>Username</span>!
+  </h1>
 </template>
 
 <script>
