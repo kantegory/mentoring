@@ -103,6 +103,7 @@
     </div>
   </main>
   <script type="text/javascript">
+    // получаем элементы DOM-дерева, с которыми будем работать 
     const previewContent = document.querySelector("#previewContent");
     const form = document.querySelector("form");
 
@@ -110,6 +111,7 @@
       return input.id
     });
 
+    // заводим константу с дефолтной вёрсткой
     const defaultPreviewContent = `
       <div>
         Email автора:
@@ -129,40 +131,55 @@
       </div>
     `;
 
+    // метод для получения дефолтного превью
+    // берёт превью из localStorage, либо 
+    // дефолтное превью
     const getDefaultPreview = () => {
       previewContent.innerHTML = localStorage.getItem('defaultPreview') || defaultPreviewContent;
     }
 
+    // метод для обработки отправки формы
     const submitComment = () => {
+      // приостанавливаем дефолтное событие
       this.event.preventDefault();
 
+      // очищаем форму
       form.reset();
 
+      // меняем заголовок превью
       document.querySelector('#previewTitle').innerHTML = "Ваш комментарий";
     }
 
+    // метод для сброса комментария
     const resetComment = () => {
-      // previewContent.innerHTML = defaultPreviewContent;
+      // очищаем localStorage
       localStorage.clear();
+      // получаем дефолтное превью
       getDefaultPreview();
     }
 
+    // метод для сохранения данных формы
     const saveForm = (_this) => {
-      console.log("THIS ELEMENT:", _this);
+      // получаем кусочек превьюшки
+      // и записываем в него данные
       previewContent
         .querySelector(`#${_this.id}Preview`)
         .innerHTML = _this.value;
       
-      // sessionStorage.setItem(_this.id, _this.value);
+      // сохраняем всё в localStorage
       localStorage.setItem(_this.id, _this.value);
       localStorage.setItem('defaultPreview', previewContent.innerHTML);
     }
 
+    // метод для восстановления данных из формы
     const getFormData = () => {
       for (const key of inputs) {
         document.querySelector(`#${key}`).value = localStorage.getItem(key)
       }
     }
+
+    // примеры добавления обработчиков событий
+    // на выбранный элемент DOM-дерева
 
     // document.querySelector("button[type='reset']").addEventListener("click", () => {
     //   resetComment();
@@ -172,9 +189,12 @@
     //   submitComment();
     // })
 
+    // отслеживаем событие DOMContentLoaded
     document.addEventListener("DOMContentLoaded", () => {
+      // заполняем дефолтное превью
       getDefaultPreview();
 
+      // восстанавливаем данные формы
       getFormData();
     })
   </script>
