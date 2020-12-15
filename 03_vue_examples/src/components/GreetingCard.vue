@@ -1,10 +1,14 @@
 <template>
-  <h1>Привет!</h1>
+  <h1>Привет, {{ username }}!</h1>
 </template>
 
 <script>
 export default {
-  name: 'GreetingCard'
+  name: 'GreetingCard',
+
+  props: {
+    username: String
+  }
 }
 </script>
 
