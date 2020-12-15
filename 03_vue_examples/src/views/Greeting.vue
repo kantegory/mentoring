@@ -4,28 +4,38 @@
 
     <h2>Это простой проект на Vue.</h2>
 
-    <form
+    <v-form
       @submit.prevent="submitUsername"
       ref="form"
+      class="my-2"
     >
-      <label for="username">
-        Введите своё имя:
-      </label>
+      <v-row>
+        <v-col cols="3" class="mx-auto">
+          <v-text-field
+            label="Введите своё имя"
+            v-model="username"
+            name="username"
+            placeholder="Иван Иванов"
+          />
+        </v-col>
+      </v-row>
 
-      <input
-        v-model="username"
-        id="username"
-        name="username"
-        type="text"
-        placeholder="Иван Иванов"
-      />
-    </form>
+    </v-form>
 
     <h3>Варианты приветствий:</h3>
 
-    <div class="greeting-list-wrapper">
-      <greeting-list :greetings="greetings" />
-    </div>
+    <v-row>
+      <v-col cols="4" class="mx-auto">
+        <v-card
+          elevation="2"
+          class="px-2 py-5"
+          color="primary"
+          dark
+        >
+          <greeting-list :greetings="greetings" />
+        </v-card>
+      </v-col>
+    </v-row>
   </section>
 </template>
 
