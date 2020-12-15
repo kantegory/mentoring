@@ -20,23 +20,37 @@
         placeholder="Иван Иванов"
       />
     </form>
+
+    <h3>Варианты приветствий:</h3>
+
+    <div class="greeting-list-wrapper">
+      <greeting-list :greetings="greetings" />
+    </div>
   </section>
 </template>
 
 <script>
 import GreetingCard from '@/components/GreetingCard'
+import GreetingList from '@/components/GreetingList'
 
 export default {
   name: 'Greeting',
 
   components: {
-    GreetingCard
+    GreetingCard,
+    GreetingList
   },
 
   data: () => ({
     username: '',
 
-    savedUsername: ''
+    savedUsername: '',
+
+    greetings: [
+      { id: 1, text: 'Привет' },
+      { id: 2, text: 'Hello' },
+      { id: 3, text: 'Hola' }
+    ]
   }),
 
   methods: {
@@ -67,4 +81,11 @@ export default {
 </script>
 
 <style>
+.greeting-list-wrapper {
+  display: flex;
+}
+
+.greeting-list-wrapper .greeting-list {
+  margin: auto
+}
 </style>
