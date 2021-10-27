@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 25vw;
+    }
+
+    form input,
+    form textarea,
+    form button {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <form onsubmit="sendRegistrationForm(this)">
+    <label for="username">Email</label>
+    <input type="email" id="username" name="username" required>
+
+    <label for="password">Пароль</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+
+  <script type="text/javascript">
+    async function sendRegistrationForm(form) {
+      this.event.preventDefault()
+
+      // const username = form.querySelector("#email").value
+      // const password = form.querySelector("#password").value
+
+      const inputs = form.querySelectorAll("input")
+
+      const formData = {}
+
+      for (const input of inputs) {
+        formData[input.name] = input.value
+      }
+
+      console.log(formData)
+
+      const response = await fetch("http://127.0.0.1:8000/auth/users/", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+
+      const responseJson = await response.json()
+
+      console.log(responseJson)
+    }
+  </script>
+</body>
+</html>

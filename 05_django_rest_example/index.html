@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API test</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 25vw;
+    }
+
+    form input,
+    form textarea,
+    form button {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="notes">
+  </div>
+
+  <form onsubmit="createNote(this)">
+    <label for="title">Заголовок заметки:</label>
+    <input type="text" id="title" name="title">
+
+    <label for="description">Описание заметки:</label>
+    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+
+    <button type="submit">Отправить</button>
+  </form>
+
+  <script type="text/javascript">
+    async function createNote(form) {
+      this.event.preventDefault()
+
+      const title = form.querySelector("input#title").value
+      const description = form.querySelector("textarea#description").value
+
+      const formData = {
+        title,
+        description,
+        user: 1
+      }
+
+      // console.log(formData)
+
+      const response = await fetch("http://127.0.0.1:8000/notes/create/", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+
+      const responseJson = await response.json()
+
+      document.querySelector("#notes").innerHTML += `
+        <div class="note">
+          <h2>${responseJson.title}</h2>
+          <p>${responseJson.description}</h2>
+            
+          <p><small>${responseJson.created_at}</p>
+        </div>
+      `
+
+      console.log(responseJson)
+    }
+  </script>
+</body>
+</html>
