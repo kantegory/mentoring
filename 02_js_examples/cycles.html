@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const a = [1, 2, 3, 4, 5]
+
+    console.log("a is", a)
+
+    for (let i = 0; i < a.length; i++) {
+      console.log("array element", a[i])
+    }
+
+    for (let i of a) {
+      console.log("array element", i)
+    } 
+
+    for (let i in a) {
+      console.log("array element", a[i])
+    }
+
+    const b = a.map((element) => { 
+      element += 1
+
+      return element
+     })
+
+     console.log("b is", b)
+
+    a.forEach((element) => { 
+      element += 1
+
+      console.log(element)
+
+      return element
+     })
+
+     console.log("updated a is", a)
+  </script>
+</body>
+
+</html>

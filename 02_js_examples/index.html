@@ -62,10 +62,10 @@
 </style>
 <body>
   <main class="form-wrapper">
-    <form onsubmit="submitComment()">
+    <form onsubmit="submitComment()" onreset="resetComment()">
       <div class="form-group">
         <label for="email">Адрес электронной почты:</label>
-        <input class="form-input" onkeyup="saveForm(this)" type="email" name="email" id="email" placeholder="email@example.com">
+        <input autocomplete="off"  class="form-input" onkeyup="saveForm(this)" type="email" name="email" id="email" placeholder="email@example.com">
       </div>
 
       <div class="form-group">
@@ -75,17 +75,17 @@
 
       <div class="form-group">
         <label for="lastName">Фамилия:</label>
-        <input class="form-input" onkeyup="saveForm(this)" type="text" name="lastName" id="lastName" placeholder="Иванов">
+        <input autocomplete="off"  class="form-input" onkeyup="saveForm(this)" type="text" name="lastName" id="lastName" placeholder="Иванов">
       </div>
 
       <div class="form-group">
         <label for="firstName">Имя:</label>
-        <input class="form-input" onkeyup="saveForm(this)" type="text" name="firstName" id="firstName" placeholder="Иван">
+        <input autocomplete="off"  class="form-input" onkeyup="saveForm(this)" type="text" name="firstName" id="firstName" placeholder="Иван">
       </div>
 
       <div class="form-group">
         <label for="middleName">Отчество:</label>
-        <input class="form-input" onkeyup="saveForm(this)" type="text" name="middleName" id="middleName" placeholder="Иванович">
+        <input autocomplete="off"  class="form-input" onkeyup="saveForm(this)" type="text" name="middleName" id="middleName" placeholder="Иванович">
       </div>
 
       <div class="form-group">
