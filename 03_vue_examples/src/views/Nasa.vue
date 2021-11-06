@@ -34,6 +34,10 @@ export default {
         const response = await this.axios
           .get(`${apiUrl}/api/natural?api_key=${apiKey}`)
 
+        // fetch example
+        // const response = await fetch(`${apiUrl}/api/natural?api_key=${apiKey}`)
+        // const responseJson = await response.json()
+
         // если статус ответа не 200, то выкинем
         // ошибку
         if (response.status !== 200) {
@@ -44,6 +48,8 @@ export default {
         // приведём его к тому виду, с которым будет
         // удобно работать
         const epicItems = response.data.map((epicItem) => {
+        // for fetch
+        // const epicItems = responseJson.map((epicItem) => {
           const date = new Date(epicItem.date)
 
           // собираем дату в нужном виде
