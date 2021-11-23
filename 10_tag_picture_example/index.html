@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag picture</title>
+
+    <style>
+        html,
+        body,
+        img {
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <picture>
+        <source srcset="./assets/art_990_383.jpg" media="(max-width: 1024px)">
+        <source srcset="./assets/art_990_383.webp" media="(max-width: 1024px)">
+        <source srcset="./assets/art.webp">
+        <img src="./assets/art.jpg" alt="" />
+    </picture>
+</body>
+
+</html>
