@@ -9,4 +9,8 @@ router
   .route('/')
   .get(exampleController.get)
 
+router
+  .route('/testCreate')
+  .post(exampleController.post)
+
 export default router

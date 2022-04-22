@@ -1,6 +1,7 @@
 import express from "express"
 import { createServer, Server } from "http"
 import routes from "../routes/example/index"
+import bodyParser from "body-parser"
 
 class App {
   public port: number
@@ -19,6 +20,7 @@ class App {
   
   private createApp(): express.Application {
       const app = express()
+      app.use(bodyParser.json())
       app.use('/v1', routes)
   
       return app
@@ -32,7 +34,7 @@ class App {
 
   public start(): void {
       this.server.listen(this.port, () => {
-          console.log(`Running server on port ${this.port}`)
+          console.log(`Running server: http://localhost:${this.port}`)
       })
   }
 }
