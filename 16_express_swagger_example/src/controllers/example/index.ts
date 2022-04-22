@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
 import client from '../../db/connector'
+import { randomUUID } from 'crypto'
 
 class ExampleController {
   get = async (request: Request, response: Response) => {
@@ -7,10 +8,16 @@ class ExampleController {
   }
 
   post = async (request: Request, response: Response) => {
+    const uuid: string = randomUUID()
     await client.connect()
-    await client.set(request.body.id, JSON.stringify({...request.body}))
+    await client.set(uuid, JSON.stringify({...request.body}))
 
-    response.send({...request.body})
+    const responseBody = {
+        uuid,
+        ...request.body
+    }
+
+    response.status(201).send(responseBody)
   }
 }
 
