@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav__list list--unstyled">
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+        <li><a href="#">Link 5</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <aside class="menu-wrapper">
+      <menu class="menu">
+        <ul class="menu__list list--unstyled">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+          <li><a href="#">Link 5</a></li>
+        </ul>
+      </menu>
+    </aside>
+    <div class="container">
+      <section>
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h1>
+
+        <p class="announce">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et doloribus quibusdam quasi expedita recusandae est quaerat nobis adipisci inventore? Exercitationem vel sint neque nam velit iure aliquam tenetur laudantium libero?
+        Repudiandae, fugiat? Magni dolorem deleniti unde officia debitis explicabo molestiae optio natus distinctio neque ducimus expedita alias quam repellat porro harum quis nemo dolor voluptate, nulla labore sed saepe numquam.
+        Perferendis dignissimos mollitia eum odio ab eius, dolorem repellendus, veniam repudiandae similique magnam neque facilis atque qui quisquam ipsa eveniet dolor quasi alias! Dolorum necessitatibus, dolor blanditiis dignissimos delectus cumque?
+        Delectus, officiis ullam eaque accusantium assumenda eum. Molestiae, nemo praesentium, laboriosam eos libero non cumque velit ullam fuga saepe, voluptate laborum quae voluptates beatae in ratione! Cum nisi incidunt quisquam!
+        Laborum numquam tempore voluptates pariatur voluptate adipisci veniam qui quidem blanditiis quos nobis sequi quia, dolorum, sunt itaque. Reiciendis fugiat odio temporibus, voluptatem quisquam numquam quae doloremque cum similique nihil.</p>
+
+        <button onclick="readMore()">Read more</button>
+      </section>
+    </div>
+  </main>
+  <script>
+    function readMore() {
+      console.log('hello world')
+      document.querySelector('.announce').classList.toggle('announce--full')
+    }
+  </script>
+  <footer>
+
+  </footer>
+</body>
+</html>
