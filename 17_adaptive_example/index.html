@@ -11,7 +11,7 @@
   <header class="header">
     <nav class="nav">
       <ul class="nav__list list--unstyled">
-        <li><a href="#">Link 1</a></li>
+        <li class="nav__list-item"><a href="#">Link 1</a></li>
         <li><a href="#">Link 2</a></li>
         <li><a href="#">Link 3</a></li>
         <li><a href="#">Link 4</a></li>
@@ -33,7 +33,7 @@
     </aside>
     <div class="container">
       <section>
-        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit</h1>
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil eum eligendi vero molestias facilis, veritatis sed repudiandae quia repellat voluptas sequi ea. Ad, nisi numquam. Aliquid eum ab qui nulla?</h1>
 
         <p class="announce">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et doloribus quibusdam quasi expedita recusandae est quaerat nobis adipisci inventore? Exercitationem vel sint neque nam velit iure aliquam tenetur laudantium libero?
         Repudiandae, fugiat? Magni dolorem deleniti unde officia debitis explicabo molestiae optio natus distinctio neque ducimus expedita alias quam repellat porro harum quis nemo dolor voluptate, nulla labore sed saepe numquam.
@@ -41,14 +41,19 @@
         Delectus, officiis ullam eaque accusantium assumenda eum. Molestiae, nemo praesentium, laboriosam eos libero non cumque velit ullam fuga saepe, voluptate laborum quae voluptates beatae in ratione! Cum nisi incidunt quisquam!
         Laborum numquam tempore voluptates pariatur voluptate adipisci veniam qui quidem blanditiis quos nobis sequi quia, dolorum, sunt itaque. Reiciendis fugiat odio temporibus, voluptatem quisquam numquam quae doloremque cum similique nihil.</p>
 
-        <button onclick="readMore()">Read more</button>
+        <button onclick="readMore(this)">Read more</button>
       </section>
     </div>
   </main>
   <script>
-    function readMore() {
-      console.log('hello world')
-      document.querySelector('.announce').classList.toggle('announce--full')
+    function readMore(button) {
+      const { classList } = document.querySelector('.announce')
+
+      classList.toggle('announce--full')
+
+      const buttonText = classList.contains('announce--full') ? 'Collapse' : 'Read more'
+
+      button.innerText = buttonText
     }
   </script>
   <footer>

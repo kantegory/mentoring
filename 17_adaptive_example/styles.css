@@ -71,7 +71,7 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(100vw - 2rem);
+  max-width: calc(100vw - 3rem - 320px);
 }
 
 @media screen and (max-width: 810px) {
