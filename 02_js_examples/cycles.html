@@ -13,35 +13,45 @@
 
     console.log("a is", a)
 
-    for (let i = 0; i < a.length; i++) {
-      console.log("array element", a[i])
-    }
+    // for (let i = 0; i < a.length; i++) {
+    //   console.log("array element", a[i])
+    // }
 
-    for (let i of a) {
-      console.log("array element", i)
-    } 
+    // for (let i of a) {
+    //   console.log("array element", i)
+    // } 
 
-    for (let i in a) {
-      console.log("array element", a[i])
-    }
+    // for (let i in a) {
+    //   console.log('index', i)
+    //   console.log("array element", a[i])
+    // }
 
-    const b = a.map((element) => { 
-      element += 1
+    // const b = a.map((element, index) => { 
+    //   console.log('array element', element)
 
-      return element
-     })
+    //   element += 1
 
-     console.log("b is", b)
+    //   return element
+    //  })
 
-    a.forEach((element) => { 
-      element += 1
+    //  console.log("b is", b)
 
-      console.log(element)
+    // const c = a.forEach((element, index) => { 
+    //   console.log('array element', element)
+    //   console.log('array index', index)
 
-      return element
-     })
+    //   element += 1
 
-     console.log("updated a is", a)
+    //   a[index] = element
+
+    //   console.log(element)
+
+    //   return element
+    //  })
+
+    //  console.log('c is', c)
+
+    //  console.log("updated a is", a)
   </script>
 </body>
 

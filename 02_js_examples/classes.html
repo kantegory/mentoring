@@ -13,8 +13,12 @@
         this.height = height
       }
 
-      countS () {
+      #_countS () {
         return this.width * this.height
+      }
+
+      countS () {
+        return this.#_countS()
       }
     }
 

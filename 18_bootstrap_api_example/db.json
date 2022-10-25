@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "email": "mail@example.com",
+      "password": "$2a$10$YUqF5kLaSlma7IcFNrcKhu9Yy4s3S3tw02T28JsUzbiZk37myZIfK",
+      "firstName": "John",
+      "lastName": "Doe",
+      "id": 1
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "name": "todo 1",
+      "tags": [
+        1
+      ],
+      "text": "bla bla",
+      "userId": 1
+    },
+    {
+      "name": "123",
+      "text": "test",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "4848238",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "4848238",
+      "userId": 1,
+      "text": "fjjfjfjf",
+      "id": 4
+    },
+    {
+      "name": "4848238",
+      "userId": 1,
+      "text": "fjjfjfjf",
+      "id": 5
+    },
+    {
+      "name": "4848238",
+      "userId": 1,
+      "text": "fjjfjfjf",
+      "id": 6
+    },
+    {
+      "name": "tetst",
+      "userId": 1,
+      "text": "fsdfds",
+      "id": 7
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "to-do"
+    },
+    {
+      "id": 2,
+      "name": "to-buy"
+    }
+  ]
+}
