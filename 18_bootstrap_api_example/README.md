@@ -22,3 +22,6 @@ $ npm install -D json-server json-server-auth
 }
 ```
 
+## Постман-коллекция
+
+Доступна по [ссылке](./postman_collection.json).
