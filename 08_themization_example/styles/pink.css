@@ -1,0 +1,5 @@
+body[data-theme="pink"] {
+  --bg-color: rgb(234, 199, 199);
+  --text-color: #676767;
+  --visited-link-color: #676767;
+}
