@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="app">
+        <h1>Главная страница</h1>
+    </main>
+    <p><a href="#/users/" data-href="#/users/" onclick="locationResolver(this.dataset.href)">Пользователи</a></p>
+    <p><a href="#/login/" data-href="#/login/" onclick="locationResolver(this.dataset.href)">Логин</a></p>
+    <p><a href="#/" data-href="#/" onclick="locationResolver(this.dataset.href)">Главная</a></p>
+</body>
+<script type="text/javascript" src="./locationResolver.js"></script>
+</html>
