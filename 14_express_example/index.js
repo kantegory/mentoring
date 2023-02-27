@@ -14,10 +14,10 @@ app.get('/users/:id', async (req, res) => {
   console.log('user is', user)
 
   if (user) {
-    res.send(user.toJSON())
+    return res.send(user.toJSON())
   }
 
-  res.send({"msg": "user is not found"})
+  return res.send({"msg": "user is not found"})
 })
 
 app.listen(port, () => {
