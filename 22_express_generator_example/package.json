@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express-generator": "^4.16.1"
+  },
+  "scripts": {
+    "generate": "npx express-generator --no-view defaulName",
+    "hello": "echo 'hello world'",
+    "build": "echo 'build'",
+    "postbuild": "echo 'postbuild'",
+    "prebuild": "echo 'prebuild'",
+    "poststart": "echo 'poststart'",
+    "prestart": "echo 'prestart'",
+    "start": "echo 'start'"
+  }
+}
