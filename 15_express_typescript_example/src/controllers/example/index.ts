@@ -1,6 +1,8 @@
+import { Request, Response } from "express"
+
 class ExampleController {
-  get = async (request: any, response: any) => {
-    response.send('Hello, world!')
+  get = async (request: Request, response: Response) => {
+    return response.send('Hello, world!')
   }
 }
 
