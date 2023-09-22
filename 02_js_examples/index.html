@@ -144,7 +144,7 @@
       this.event.preventDefault();
 
       // очищаем форму
-      form.reset();
+      Array.from(document.querySelectorAll("form .form-group .form-input")).map((input) => input.value = '')
 
       // меняем заголовок превью
       document.querySelector('#previewTitle').innerHTML = "Ваш комментарий";
