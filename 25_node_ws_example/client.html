@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="messages">
+        <p><strong>Полученные сообщения:</strong></p>
+    </div>
+
+    <form>
+        <input name="message">
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+        const ws = new WebSocket('ws://localhost:8080');
+
+        ws.addEventListener('error', console.error);
+
+        ws.addEventListener('open', function open() {
+            ws.send('Подключение установлено');
+        });
+
+        ws.addEventListener('message', function message(data) {
+            window.messages.innerHTML += `
+                <p>${data.data}</p>
+            `;
+        });
+
+        document.querySelector("form").addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            sendData(event);
+        })
+
+        const sendData = (event) => {
+            const message = document.querySelector('[name="message"]');
+
+            ws.send(message.value);
+        }
+    </script>
+</body>
+</html>
