@@ -8,3 +8,7 @@
 .icon--rotate {
     transform: rotate(90deg);
 }
+
+.icon--fill {
+    fill: currentColor;
+}
