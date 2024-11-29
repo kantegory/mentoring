@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой пример SPA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main id="app"></main>
+
+    <script src="/router/history.js"></script>
+    <script src="/router/hash.js"></script>
+
+    <script type="text/javascript">
+        const mainPage = `
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">SimpleSPA</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/" data-link>Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about" data-link>О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contacts" data-link>Контакты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/non-exist" data-link>Несуществующая страница</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="row container mx-auto my-2">
+                <div class="col-4">
+                    <article class="card">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus odio nobis voluptate, facere minus ratione nemo veniam sunt vitae inventore, corrupti temporibus et. Aperiam eos iure vitae culpa numquam molestias.
+                        </div>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="card">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus odio nobis voluptate, facere minus ratione nemo veniam sunt vitae inventore, corrupti temporibus et. Aperiam eos iure vitae culpa numquam molestias.
+                        </div>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="card">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus odio nobis voluptate, facere minus ratione nemo veniam sunt vitae inventore, corrupti temporibus et. Aperiam eos iure vitae culpa numquam molestias.
+                        </div>
+                    </article>
+                </div>
+            </section>
+        `;
+
+        const aboutPage = `
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">SimpleSPA</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/" data-link>Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/about" data-link>О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contacts" data-link>Контакты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/non-exist" data-link>Несуществующая страница</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="container">
+                <p>Мы - крупная компания с долгой историей</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id qui ratione ipsum doloribus consectetur excepturi temporibus rem, eveniet soluta quis vel tempore, illum architecto tenetur eum praesentium, earum non quia.</p>
+            </section>
+        `;
+
+        const contactsPage = `
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">SimpleSPA</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/" data-link>Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about" data-link>О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/contacts" data-link>Контакты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/non-exist" data-link>Несуществующая страница</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="container">
+                <p>Телефон: +79999999999</p>
+            </section>
+        `;
+
+        const routes = {
+            '/': () => mainPage,
+            '/about': () => aboutPage,
+            '/contacts': () => contactsPage,
+        };
+
+        // history router
+        const router = new Router(routes);
+        // hash router: откомментируйте, чтобы подключить
+        // const router = new HashRouter(routes);
+    </script>
+</body>
+</html>
