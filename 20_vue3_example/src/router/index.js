@@ -2,16 +2,19 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  // массив с роутами
   routes: [
+    // отдельный роут
     {
       path: '/',
       name: 'notes',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/NotesPage.vue')
+      // реализация ленивой подгрузки представления
+      // (до момента открытия этого представления, 
+      // оно не будет сохранено в браузере пользователя)
+      component: () => import('../views/NotesPage.vue'),
     }
   ]
 })
 
+// экспортируем сконфигурированный роутер
 export default router

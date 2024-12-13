@@ -2,11 +2,29 @@
   <base-layout>
     <h1>Notes app</h1>
 
-    <form ref="noteForm" @submit.prevent="createCard" class="d-flex flex-column my-5">
-      <input type="text" v-model="form.name" class="my-1">
-      <textarea cols="30" rows="10" v-model="form.text" class="my-1" />
+    <form
+      ref="noteForm"
+      @submit.prevent="createCard"
+      class="d-flex flex-column my-5"
+    >
+      <input
+        type="text"
+        v-model="form.name"
+        class="my-1"
+      >
 
-      <button type="submit" class="btn btn-primary">Отправить</button>
+      <textarea
+        cols="30" rows="10"
+        v-model="form.text"
+        class="my-1"
+      />
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+      >
+        Отправить
+      </button>
     </form>
 
     <div class="row row-cols-1 row-cols-md-2 g-4 mt-5" id="notes">
