@@ -1,0 +1,37 @@
+{
+  "name": "29_express_swagger_routing_controllers_example",
+  "version": "1.0.0",
+  "description": "Пример реализации автодокументирования средствами swagger и routing controllers",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "prestart": "npm run build",
+    "start": "node dist/app.js",
+    "dev": "npx tsx --env-file=.env --watch  src/app.ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "class-validator-jsonschema": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "reflect-metadata": "^0.2.2",
+    "routing-controllers": "0.11.0",
+    "routing-controllers-openapi": "git+https://github.com/kantegory/routing-controllers-openapi.git",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.13.10",
+    "@types/swagger-ui-express": "^4.1.8",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "author": "David Dobryakov <kantegory@kantegory.me>",
+  "license": "ISC"
+}
