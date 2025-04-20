@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm run build",
+    "prestart": "npm run build && node generateDoc.js",
     "start": "nodemon dist/index.js",
     "build": "npx tsc",
     "lint": "npx eslint . --ext .ts"

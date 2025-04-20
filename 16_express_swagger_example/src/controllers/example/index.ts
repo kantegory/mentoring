@@ -9,8 +9,8 @@ class ExampleController {
 
   post = async (request: Request, response: Response) => {
     const uuid: string = randomUUID()
-    await client.connect()
-    await client.set(uuid, JSON.stringify({...request.body}))
+    // await client.connect()
+    // await client.set(uuid, JSON.stringify({...request.body}))
 
     const responseBody = {
         uuid,
