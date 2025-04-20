@@ -1,0 +1,110 @@
+{
+	"openapi": "3.0.0",
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"TestCreateResponseDto": {
+				"properties": {
+					"username": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"uuid": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"username",
+					"password",
+					"uuid"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TestCreateDto": {
+				"properties": {
+					"username": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"username",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "30_express_swagger_tsoa_example",
+		"version": "1.0.0",
+		"description": "Пример реализации автодокументирования средствами swagger и tsoa",
+		"license": {
+			"name": "ISC"
+		},
+		"contact": {
+			"name": "David Dobryakov ",
+			"email": "kantegory@kantegory.me"
+		}
+	},
+	"paths": {
+		"/testCreate": {
+			"post": {
+				"operationId": "Post",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/TestCreateResponseDto"
+								}
+							}
+						}
+					},
+					"201": {
+						"description": "Returns a created object.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/TestCreateResponseDto"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Example"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/TestCreateDto"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
