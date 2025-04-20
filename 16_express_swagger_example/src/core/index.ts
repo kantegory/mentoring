@@ -21,7 +21,7 @@ class App {
   
   private createApp(): express.Application {
       const app = express()
-      app.use(bodyParser.json())
+      app.use(express.json())
       app.use('/v1', routes)
 
       // eslint-disable-next-line @typescript-eslint/no-var-requires
