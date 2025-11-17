@@ -55,13 +55,21 @@
     async function login(event) {
       event.preventDefault()
 
-      const inputs = Array.from(event.target.querySelectorAll('input'))
+      // основной способ сбора данных с форм
+      const formData = new FormData(event.target)
 
       const loginData = {}
 
-      for (const input of inputs) {
-        loginData[input.name] = input.value
-      }
+      formData.forEach((value, label) => loginData[label] = value)
+
+      // дополнительный способ сбора данных с форм
+      // const inputs = Array.from(event.target.querySelectorAll('input'))
+
+      // const loginData = {}
+
+      // for (const input of inputs) {
+      //   loginData[input.name] = input.value
+      // }
 
       console.log('login data', loginData)
 
@@ -72,6 +80,12 @@
           'Content-Type': 'application/json'
         }
       })
+
+      if (!response.ok) {
+        return
+      }
+
+      console.log('response', response)
 
       const responseJson = await response.json()
 
