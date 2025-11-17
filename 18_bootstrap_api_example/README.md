@@ -1,6 +1,6 @@
 # Работа с JSON-сервером
 
-Для начала надо установить node.js. Я использую 16 версию.
+Для начала надо установить node.js. Я использую 22 версию.
 
 Инструкция по установке node.js и npm есть тут: https://nodejs.org/en/download/ или тут для линукса: https://github.com/nodesource/distributions
 
