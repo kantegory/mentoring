@@ -1,0 +1,61 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    max-height: 100vh;
+    height: 100%;
+    overflow-y: auto;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+main {
+    height: 100%;
+    height: -webkit-fill-available;
+    max-height: calc(100vh - 80px);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+aside {
+    min-height: calc(100vh - 80px);
+}
+
+.navbar {
+    height: 80px;
+}
+
+.notes-list {
+    min-height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    height: 100%;
+}
+
+.notes-list .card .card-body {
+    padding: 0.25rem;
+}
+
+.notes-list .card.active {
+    background: var(--bs-gray-300);
+    transition: background ease 500ms;
+    cursor: pointer;
+}
+
+.notes-list .card:hover {
+    background: var(--bs-gray-300);
+    transition: background ease 500ms;
+    cursor: pointer;
+}
+
+.note-content {
+    min-height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    height: 100%;
+}
+
+.bi {
+    stroke: currentColor;
+    fill: transparent !important;
+}

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Заметки</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body class="row container-fluid mx-0 px-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <symbol id="folder">
+                <path
+                    d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z"
+                />
+            </symbol>
+            <symbol id="trash">
+                <path
+                    d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293z"
+                />
+            </symbol>
+        </svg>
+        <header class="col-12 mx-0 px-0">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand">Заметки</a>
+                    <form class="d-flex mx-auto" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Введите название..."
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <aside class="col-2 bg-light">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+                            <use xlink:href="#folder"></use>
+                        </svg>
+                        Список дел
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-body-emphasis">
+                        <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+                            <use xlink:href="#folder"></use>
+                        </svg>
+                        Конспекты
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-body-emphasis">
+                        <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
+                            <use xlink:href="#folder"></use>
+                        </svg>
+                        Планы
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="col-10 px-0">
+            <div class="row mx-0 px-0">
+                <div class="col-3 px-0 overflow-y-auto notes-list border-end">
+                    <div class="card active border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Lorem</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+                            <small class="text-muted">Lorem ipsum dolor sit amet</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Facere</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+                            <small class="text-muted">Facere sunt autem exercitationem delectus</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Veniam</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+
+                            <small class="text-muted">Veniam, nemo odio! Natus facere non illum</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Veritatis</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+
+                            <small class="text-muted">Veritatis error sint quae!</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Hic quas</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+
+                            <small class="text-muted">Hic quas natus a atque earum porro</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Cum recusandae</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+
+                            <small class="text-muted">Cum recusandae maxime fuga amet odit</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Est, at laborum</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+                            <small class="text-muted">Est, at laborum alias aspernatur mollitia</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Accusantium</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+
+                            <small class="text-muted">Accusantium, cumque pariatur officiis illo</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Assumenda maxime</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+
+                            <small class="text-muted">Assumenda maxime cupiditate tempora reprehenderit</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Soluta</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+
+                            <small class="text-muted">Soluta eaque perferendis numquam perspiciatis, non</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Repellendus</h5>
+
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+
+                            <h5 class="card-title h6">Repellendus</h5>
+                            <small class="text-muted">Ex, sequi aut impedit omnis earum est corrupti</small>
+                        </div>
+                    </div>
+                    <div class="card border-0 border-bottom">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title h6">Earum</h5>
+                                <small class="text-muted">01.03.2026, 21:59</small>
+                            </div>
+                            <small class="text-muted"
+                                >Optio officiis nulla aliquam, provident a excepturi accusantium inventore eaque fugit
+                                accusamus</small
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 note-content overflow-y-auto px-4 py-2">
+                    <div class="d-flex justify-content-center align-items-center text-muted">
+                        <small>01.03.2026, 21:59</small><small>&nbsp;—&nbsp;</small><small>Список дел</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <input class="h1 border-0" value="Lorem" />
+                        <div class="">
+                            <button class="btn btn-outline-danger border-0">
+                                <svg class="bi" width="16" height="16" aria-hidden="true">
+                                    <use xlink:href="#trash"></use>
+                                </svg>
+                                <span class="visually-hidden">Удалить</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-2" contenteditable="true">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt natus perspiciatis labore
+                            consequatur reprehenderit ab totam dicta at hic cum, quas mollitia laborum dolorum impedit
+                            autem quia. Nesciunt, in dignissimos.
+                        </p>
+                        <p>
+                            Reiciendis dolorum quibusdam necessitatibus nisi ex odio, asperiores velit quaerat ut
+                            tenetur neque totam ullam assumenda eius illum. Ullam officiis distinctio itaque adipisci
+                            tempora accusantium nulla saepe ipsum voluptates dolorum?
+                        </p>
+                        <p>
+                            Deleniti dignissimos nihil, expedita provident sequi dolorum ullam assumenda impedit, odit
+                            fugit sed pariatur rem tempora ipsum corporis ducimus mollitia. Ratione blanditiis debitis
+                            eligendi rem nobis maiores fugit beatae voluptatem?
+                        </p>
+                        <p>
+                            Ea, error provident. Ut odit quod placeat voluptatibus ea optio sequi voluptate illo
+                            consequuntur corporis voluptas exercitationem dicta consectetur ab, magnam aliquid accusamus
+                            nulla. Dolorem atque impedit placeat ea eius!
+                        </p>
+                        <p>
+                            Consequatur, voluptas. Optio officia ex, temporibus eum dignissimos, officiis eveniet quasi
+                            laudantium ut mollitia neque aut eaque veniam est odio quae, vel repellat impedit! Autem
+                            esse provident a et atque.
+                        </p>
+                        <p>
+                            Laboriosam inventore doloribus animi placeat tempore quam, vel et eaque fugiat, sed quos
+                            assumenda quis neque blanditiis magnam praesentium culpa architecto repudiandae aspernatur
+                            aliquid perferendis nostrum sequi. Odit, velit nulla.
+                        </p>
+                        <p>
+                            Perferendis fugiat animi quo fugit, quos deleniti maxime nulla similique, minima suscipit
+                            molestias. Laudantium fugiat cupiditate alias sapiente ab. Commodi adipisci accusantium illo
+                            dolor fugit voluptatum veniam fuga qui cumque?
+                        </p>
+                        <p>
+                            Explicabo, saepe deleniti fugit ipsam corrupti, nisi, dolorum sint sit neque reiciendis
+                            aspernatur dolore libero fugiat molestiae cumque. Soluta odio laboriosam est earum voluptate
+                            vel autem reprehenderit possimus sunt dolore!
+                        </p>
+                        <p>
+                            Porro maiores aut laudantium reiciendis amet quisquam incidunt nihil, et quia repellat
+                            sapiente ullam? Error nobis odio quos explicabo nisi necessitatibus tempora repudiandae
+                            eligendi, modi harum accusamus consequuntur ipsam itaque.
+                        </p>
+                        <p>
+                            Id, doloremque corporis vel delectus nam quos hic cumque autem magni provident voluptate
+                            culpa impedit repellendus totam consequuntur, ab porro fugiat voluptatum explicabo quidem!
+                            Consequuntur accusamus eveniet ad id optio?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
