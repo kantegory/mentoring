@@ -1,0 +1,27 @@
+.nav-link,
+.nav-link:hover {
+    color: white !important;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+aside {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.bi {
+    stroke: currentColor;
+    /* fill: currentColor; */
+}
+
+.notes-list {
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+
+}
