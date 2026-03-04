@@ -1,5 +1,5 @@
 services:
     rabbitmq:
-        image: rabbitmq
+        image: rabbitmq:3.8
         ports:
             - 5672:5672
