@@ -31,12 +31,7 @@ async function connect() {
             // отправка запроса в сервис склада
             channel.sendToQueue(
                 'stock',
-                Buffer.from(
-                    JSON.stringify({
-                        ...data,
-                        date: new Date(),
-                    }),
-                ),
+                data!.content,
             )
 
             channel.ack(data!);
