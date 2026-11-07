@@ -1,24 +1,27 @@
 # 03_vue_examples
 
-## Project setup
-```
-npm install
-```
+⚠️ ПРИМЕР УСТАРЕВШИЙ
+Оставлено в качестве исторического примера
 
-### Compiles and hot-reloads for development
-```
+Демонстрационное SPA-приложение на базе Vue 2 с использованием библиотеки компонентов Vuetify 2, маршрутизации через Vue Router и клиента Axios для работы с публичным API NASA (Astronomy Picture of the Day).
+
+## Установка и запуск
+
+> Для запуска рекомендуется использовать версию Node.js, зафиксированную в `.nvmrc` (v16).
+
+```bash
+npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
+### Сборка для продакшена
+
+```bash
 npm run build
 ```
 
-### Lints and fixes files
-```
+### Линтинг
+
+```bash
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

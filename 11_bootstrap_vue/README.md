@@ -1,24 +1,27 @@
 # 11_bootstrap_vue
 
-## Project setup
-```
-npm install
-```
+⚠️ ПРИМЕР УСТАРЕВШИЙ
+Оставлено в качестве исторического примера
 
-### Compiles and hot-reloads for development
-```
+Демонстрация интеграции и использования библиотеки компонентов BootstrapVue в проекте на Vue 2 и Bootstrap 4.
+
+## Установка и запуск
+
+> Для запуска рекомендуется использовать версию Node.js, зафиксированную в `.nvmrc` (v16).
+
+```bash
+npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
+### Сборка для продакшена
+
+```bash
 npm run build
 ```
 
-### Lints and fixes files
-```
+### Линтинг
+
+```bash
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

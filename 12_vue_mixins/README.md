@@ -1,24 +1,17 @@
 # 12_vue_mixins
 
-## Project setup
-```
-npm install
-```
+⚠️ ПРИМЕР УСТАРЕВШИЙ
+Оставлено в качестве исторического примера
 
-### Compiles and hot-reloads for development
-```
+Пример организации и переиспользования логики между компонентами во Vue 2 с помощью миксинов (`src/mixins/exampleMixin.js`, `src/mixins/requestMixin.js`).
+
+> В современном Vue 3 концепция Mixins считается устаревшей и заменена на Composition API (Composables), решающие проблемы конфликта имен и неявных зависимостей.
+
+## Установка и запуск
+
+> Для запуска рекомендуется использовать версию Node.js, зафиксированную в `.nvmrc` (v16).
+
+```bash
+npm install
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

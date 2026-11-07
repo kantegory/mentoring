@@ -1,27 +1,25 @@
-# 29 express swagger routing controllers example
+# 29_express_swagger_routing_controllers_example
 
-Простой пример реализации автодокументирования API за счёт использования routing-controllers ([routing-controllers](https://www.npmjs.com/package/routing-controllers), [routing-controllers-openapi](https://www.npmjs.com/package/routing-controllers-openapi)). Пример:
+Пример построения типобезопасного и декларативного REST API на Express с помощью библиотеки `routing-controllers`, валидации входных DTO через `class-validator` и автогенерации спецификации Swagger/OpenAPI ([routing-controllers-openapi](https://www.npmjs.com/package/routing-controllers-openapi)).
+
+Пример контроллера:
 
 ```typescript
 @JsonController()
 export class ExampleController {
-    @OpenAPI({ summary: 'Test create' })
-    @ResponseSchema(TestCreateResponseDto, { statusCode: 200 })
-    @Post('/testCreate')
-    post(
-        @Body({ type: TestCreateDto }) body: TestCreateDto,
-        @Res() response: Response,
-    ): void {
-        const uuid: string = randomUUID();
-
-        const responseBody = {
-            uuid,
-            ...body,
-        };
-
-        response.status(201).send(responseBody);
+    @OpenAPI({ summary: 'Create user' })
+    @Post('/users')
+    public async create(@Body() body: CreateUserDto) {
+        return body;
     }
 }
 ```
 
-Обратите внимание, что используется не оригинальная зависимость `routing-controllers-openapi`, а мой собственный форк. Отличия только в том, что изменён порядок вызовов внутри функции по определению типа (для фикса ошибки генерации openapi-схемы в tsx-рантайме).
+## Установка и запуск
+
+```bash
+npm install
+npm run dev
+```
+
+Документация Swagger доступна по адресу `http://localhost:3000/docs/`.

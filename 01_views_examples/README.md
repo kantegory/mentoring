@@ -1,4 +1,4 @@
-# Примеры работы с представлениями Django
+# 01_views_examples: Примеры работы с представлениями Django
 
 Здесь собраны примеры реализации CRUD-методов с использованием Django generic Views.
 
@@ -24,7 +24,7 @@ $ cd 01_views_examples
 $ make
 ```
 
-Активировать вирутальное окружение:
+Активировать виртуальное окружение:
 
 ```bash
 $ pipenv shell
@@ -65,5 +65,3 @@ $ APP=appname make app
 ```
 
 Вызывает `python manage.py startapp appname`.
-
-

@@ -1,6 +1,8 @@
-# 16 express swagger example
+# 16_express_swagger_example
 
-Простой пример реализации автодокументирования API за счёт написания подробных JSDOC-комментариев ([swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc)). Пример:
+Простой пример реализации автодокументирования API за счёт написания подробных JSDOC-комментариев ([swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc)) и отображения интерактивного интерфейса через [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express).
+
+Пример:
 
 ```typescript
 /**
@@ -14,18 +16,17 @@
  *         in: formData
  *         required: true
  *         type: string
- *       - name: password
- *         in: formData
- *         required: true
- *         type: string
- *     description: Test create
  *     responses:
  *       200:
  *         description: Returns a created object.
  */
-router
-  .route('/testCreate')
-  .post(exampleController.post)
 ```
 
-Для сборки `swagger.json` используется утилита `generateDoc.js`.
+## Установка и запуск
+
+```bash
+npm install
+npm run dev
+```
+
+Документация доступна по адресу `http://localhost:3000/docs/`.

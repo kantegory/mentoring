@@ -1,44 +1,29 @@
 # 33_vue_notes_example
 
-This template should help get you started developing with Vue 3 in Vite.
+Полноценное клиентское приложение заметок, разработанное на современном стеке: Vue 3.5+, Vite 8, Pinia 3, Vue Router 5 и Bootstrap 5.3.
 
-## Recommended IDE Setup
+Для обеспечения качества кода используются быстрый линтер Oxlint и ESLint.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Рекомендуемое окружение IDE
 
-## Recommended Browser Setup
+- [VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar);
+- Расширение [Vue.js Devtools](https://devtools.vuejs.org/) в браузере.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Установка и запуск
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Сборка для продакшена
 
-```sh
+```bash
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Линтинг кода
 
-```sh
+```bash
 npm run lint
 ```

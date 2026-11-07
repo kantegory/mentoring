@@ -1,35 +1,22 @@
 # 20_vue3_example
 
-This template should help get you started developing with Vue 3 in Vite.
+Пример SPA-приложения на базе Vue 3, сборщика Vite, менеджера состояния Pinia (с сохранением состояния в `localStorage` через `pinia-persists`), Vue Router и Bootstrap 5. В качестве бэкенда используется мок-сервер `json-server-auth`.
 
-## Recommended IDE Setup
+## Установка и запуск
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Запуск мок-сервера
 
-```sh
-npm run build
+```bash
+npm run server
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Сборка для продакшена
 
-```sh
-npm run lint
+```bash
+npm run build
 ```
