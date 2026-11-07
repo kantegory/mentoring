@@ -1,5 +1,5 @@
 
-import amqplib, { Channel, Connection } from 'amqplib'
+import amqplib, { Channel, ChannelModel } from 'amqplib'
 import express from 'express'
 
 const app = express()
@@ -10,7 +10,7 @@ app.use(express.json())
 const PORT = 9005
 
 // глобальные переменные для RabbitMQ
-let channel: Channel, connection: Connection
+let channel: Channel, connection: ChannelModel
 
 connect()
 

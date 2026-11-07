@@ -1,11 +1,13 @@
 {
   "dependencies": {
-    "@types/amqplib": "^0.10.5",
-    "@types/express": "^4.17.21",
-    "amqplib": "^0.10.4",
-    "express": "^4.19.2"
+    "@types/amqplib": "^0.10.6",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.10",
+    "amqplib": "^0.10.5",
+    "express": "^4.21.2"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }

@@ -14,22 +14,22 @@
 | **04** | [04_vue_auth_example](./04_vue_auth_example) | Клиентская аутентификация и регистрация пользователей с формами входа/регистрации. | Vue 2, Vuetify 2, Vue Router | ⚠️ Устаревший |
 | **05** | [05_django_rest_example](./05_django_rest_example) | REST API для сервиса заметок на Django REST Framework с клиентским JS-интерфейсом. | Python, Django, DRF, JS | Актуализируется |
 | **06** | [06_bootstrap_example](./06_bootstrap_example) | Примеры типовой вёрстки страниц и компонентов интерфейса Bootstrap 5 (CDN). | Bootstrap 5, HTML, CSS | Актуален |
-| **07** | [07_json_server_example](./07_json_server_example) | Быстрое развёртывание мок-сервера REST API на базе JSON-файла. | Node.js, json-server | В обновлении |
+| **07** | [07_json_server_example](./07_json_server_example) | Быстрое развёртывание мок-сервера REST API на базе JSON-файла. | Node.js, json-server | Актуален |
 | **08** | [08_themization_example](./08_themization_example) | Реализация динамического переключения тем оформления (light, dark, blue, pink). | JavaScript, CSS, HTML | Актуален |
 | **09** | [09_svg_sprite_example](./09_svg_sprite_example) | Использование SVG-спрайтов (`<use href="...">`) и иконок совместно с Bootstrap 5. | SVG, Bootstrap 5, HTML | Актуален |
 | **10** | [10_tag_picture_example](./10_tag_picture_example) | Адаптивные изображения с тегом `<picture>` и форматами нового поколения (AVIF, WebP, JPG). | HTML5, AVIF, WebP | Актуален |
 | **11** | [11_bootstrap_vue](./11_bootstrap_vue) | Использование библиотеки компонентов BootstrapVue в проекте на Vue 2. | Vue 2, BootstrapVue, Bootstrap 4 | ⚠️ Устаревший |
 | **12** | [12_vue_mixins](./12_vue_mixins) | Переиспользование логики компонентов через миксины (Mixins) во Vue 2. | Vue 2, Vue CLI | ⚠️ Устаревший |
-| **14** | [14_express_example](./14_express_example) | Серверное REST API на Express с базой данных SQLite и ORM Sequelize (миграции, модели). | Node.js, Express, Sequelize, SQLite | В обновлении |
-| **15** | [15_express_typescript_example](./15_express_typescript_example) | Архитектурный каркас бэкенда на Express и TypeScript (routes, controllers, core). | Node.js, Express, TypeScript | В обновлении |
-| **16** | [16_express_swagger_example](./16_express_swagger_example) | Документирование REST API через JSDoc-аннотации (`swagger-jsdoc`) и Swagger UI. | Express, TypeScript, Swagger UI | В обновлении |
+| **14** | [14_express_example](./14_express_example) | Серверное REST API на Express с базой данных SQLite и ORM Sequelize (миграции, модели). | Node.js, Express, Sequelize, SQLite | Актуален |
+| **15** | [15_express_typescript_example](./15_express_typescript_example) | Архитектурный каркас бэкенда на Express и TypeScript (routes, controllers, core). | Node.js, Express, TypeScript | Актуален |
+| **16** | [16_express_swagger_example](./16_express_swagger_example) | Документирование REST API через JSDoc-аннотации (`swagger-jsdoc`) и Swagger UI. | Express, TypeScript, Swagger UI | Актуален |
 | **17** | [17_adaptive_example](./17_adaptive_example) | Приемы адаптивной верстки на Bootstrap 5: сетка (Grid), flex-утилиты, брейкпоинты. | Bootstrap 5, HTML, CSS | Актуален |
 | **18** | [18_bootstrap_api_example](./18_bootstrap_api_example) | Клиентское приложение с авторизацией, взаимодействующее с REST API на базе `json-server-auth`. | Bootstrap 5, JS, json-server-auth | Сохранён |
 | **19** | [19_frontend_router](./19_frontend_router) | Клиентский SPA-роутинг на чистом JavaScript (через `hash` и через `History API`). | JavaScript, HTML | Актуален |
 | **20** | [20_vue3_example](./20_vue3_example) | Полноценный SPA на Vue 3, Vite, Pinia (c персистентностью), Vue Router и Bootstrap 5. | Vue 3, Vite, Pinia, Bootstrap 5 | В обновлении |
 | **21** | [21_vue3_plugins_example](./21_vue3_plugins_example) | Подключение сторонних библиотек во Vue 3 на примере календаря событий FullCalendar. | Vue 3, Vite, FullCalendar | В обновлении |
-| **22** | [22_express_generator_example](./22_express_generator_example) | Шаблоны генерации структуры Express-приложений с помощью `express-generator`. | Node.js, Express, Twig | В обновлении |
-| **23** | [23_express_cookies_example](./23_express_cookies_example) | Работа с HTTP-куками на сервере Express через middleware `cookie-parser` (в т.ч. signed cookies). | Node.js, Express, cookie-parser | В обновлении |
+| **22** | [22_express_generator_example](./22_express_generator_example) | Шаблоны генерации структуры Express-приложений с помощью `express-generator`. | Node.js, Express, Twig | Актуален |
+| **23** | [23_express_cookies_example](./23_express_cookies_example) | Работа с HTTP-куками на сервере Express через middleware `cookie-parser` (в т.ч. signed cookies). | Node.js, Express, cookie-parser | Актуален |
 | **24** | [24_postman_example](./24_postman_example) | Коллекция запросов Postman: структурирование папок, переменные и автотесты для REST API. | Postman Collection v2.1 | Актуален |
 | **25** | [25_node_ws_example](./25_node_ws_example) | Обмен сообщениями в реальном времени по WebSocket (библиотека `ws`) с браузерным клиентом. | Node.js, WebSocket (`ws`), HTML/JS | Актуален |
 | **26** | [26_express_rabbitmq](./26_express_rabbitmq) | Асинхронное взаимодействие микросервисов (корзина, склад, платежи) через RabbitMQ. | Node.js, Express, TypeScript, RabbitMQ | Актуален |
