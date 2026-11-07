@@ -26,8 +26,8 @@
 | **17** | [17_adaptive_example](./17_adaptive_example) | Приемы адаптивной верстки на Bootstrap 5: сетка (Grid), flex-утилиты, брейкпоинты. | Bootstrap 5, HTML, CSS | Актуален |
 | **18** | [18_bootstrap_api_example](./18_bootstrap_api_example) | Клиентское приложение с авторизацией, взаимодействующее с REST API на базе `json-server-auth`. | Bootstrap 5, JS, json-server-auth | Сохранён |
 | **19** | [19_frontend_router](./19_frontend_router) | Клиентский SPA-роутинг на чистом JavaScript (через `hash` и через `History API`). | JavaScript, HTML | Актуален |
-| **20** | [20_vue3_example](./20_vue3_example) | Полноценный SPA на Vue 3, Vite, Pinia (c персистентностью), Vue Router и Bootstrap 5. | Vue 3, Vite, Pinia, Bootstrap 5 | В обновлении |
-| **21** | [21_vue3_plugins_example](./21_vue3_plugins_example) | Подключение сторонних библиотек во Vue 3 на примере календаря событий FullCalendar. | Vue 3, Vite, FullCalendar | В обновлении |
+| **20** | [20_vue3_example](./20_vue3_example) | Полноценный SPA на Vue 3, Vite, Pinia (c персистентностью), Vue Router и Bootstrap 5. | Vue 3, Vite, Pinia, Bootstrap 5 | Актуален |
+| **21** | [21_vue3_plugins_example](./21_vue3_plugins_example) | Подключение сторонних библиотек во Vue 3 на примере календаря событий FullCalendar. | Vue 3, Vite, FullCalendar | Актуален |
 | **22** | [22_express_generator_example](./22_express_generator_example) | Шаблоны генерации структуры Express-приложений с помощью `express-generator`. | Node.js, Express, Twig | Актуален |
 | **23** | [23_express_cookies_example](./23_express_cookies_example) | Работа с HTTP-куками на сервере Express через middleware `cookie-parser` (в т.ч. signed cookies). | Node.js, Express, cookie-parser | Актуален |
 | **24** | [24_postman_example](./24_postman_example) | Коллекция запросов Postman: структурирование папок, переменные и автотесты для REST API. | Postman Collection v2.1 | Актуален |
