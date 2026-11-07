@@ -1,67 +1,42 @@
 # 01_views_examples: Примеры работы с представлениями Django
 
-Здесь собраны примеры реализации CRUD-методов с использованием Django generic Views.
+Здесь собраны примеры реализации CRUD-методов с использованием стандартных Django generic Views (`ListView`, `DetailView`, `CreateView`, `UpdateView`, `DeleteView`).
 
 ## Инструкция по развёртыванию
 
-Чтобы развернуть проект у себя необходимо:
-
-Склонировать репозиторий:
+### 1. Создать виртуальное окружение и установить зависимости
 
 ```bash
-$ git clone git@github.com:kantegory/mentoring.git
+cd 01_views_examples
+make # или: python3 -m venv venv && ./venv/bin/pip install -r requirements.txt
 ```
 
-Перейти в директорию `01_views_examples`:
+### 2. Активировать окружение
 
 ```bash
-$ cd 01_views_examples
+source venv/bin/activate
 ```
 
-Инициализировать зависимости:
+### 3. Перейти в папку проекта и применить миграции
 
 ```bash
-$ make
+cd example_project
+python manage.py migrate
 ```
 
-Активировать виртуальное окружение:
+### 4. Запустить проект
 
 ```bash
-$ pipenv shell
+python manage.py runserver
+# или: make run
 ```
 
-Перейти в папку проекта:
-
-```bash
-$ cd example_project
-```
-
-Сделать миграции:
-
-```bash
-$ make migrate
-```
-
-Запустить проект:
-
-```bash
-$ make
-```
-
-Теперь проект доступен по адресу http://127.0.0.1:8000/.
+Проект доступен по адресу: http://127.0.0.1:8000/
 
 ---
 
-**ВАЖНО!** В Makefile уже есть некоторые дополнительные (кроме migrate и run) команды для упрощения работы с manage.py, вот их список:
+**Полезные команды из Makefile проекта (`example_project/Makefile`):**
 
-```bash
-$ make admin
-```
-
-Вызывает `python manage.py createsuperuser`.
-
-```bash
-$ APP=appname make app
-```
-
-Вызывает `python manage.py startapp appname`.
+- `make admin` — запуск `python manage.py createsuperuser`
+- `APP=appname make app` — создание нового приложения `python manage.py startapp appname`
+- `make migrate` — создание и применение миграций

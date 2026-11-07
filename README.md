@@ -8,11 +8,11 @@
 
 | № | Пример | Описание | Стек технологий | Статус |
 | :-: | :--- | :--- | :--- | :--- |
-| **01** | [01_views_examples](./01_views_examples) | Реализация CRUD-операций на Django с использованием встроенных generic views (`ListView`, `DetailView`, `CreateView`, `UpdateView`, `DeleteView`). | Python, Django, SQLite | Актуализируется |
+| **01** | [01_views_examples](./01_views_examples) | Реализация CRUD-операций на Django с использованием встроенных generic views (`ListView`, `DetailView`, `CreateView`, `UpdateView`, `DeleteView`). | Python, Django, SQLite | Актуален |
 | **02** | [02_js_examples](./02_js_examples) | Базовые синтаксические конструкции JavaScript: функции, циклы, классы ES6, условные операторы. | JavaScript, HTML | Актуален |
 | **03** | [03_vue_examples](./03_vue_examples) | SPA-приложение со списком карточек и интеграцией с NASA API. | Vue 2, Vuetify 2, Webpack | ⚠️ Устаревший |
 | **04** | [04_vue_auth_example](./04_vue_auth_example) | Клиентская аутентификация и регистрация пользователей с формами входа/регистрации. | Vue 2, Vuetify 2, Vue Router | ⚠️ Устаревший |
-| **05** | [05_django_rest_example](./05_django_rest_example) | REST API для сервиса заметок на Django REST Framework с клиентским JS-интерфейсом. | Python, Django, DRF, JS | Актуализируется |
+| **05** | [05_django_rest_example](./05_django_rest_example) | REST API для сервиса заметок на Django REST Framework с клиентским JS-интерфейсом. | Python, Django, DRF, JS | Актуален |
 | **06** | [06_bootstrap_example](./06_bootstrap_example) | Примеры типовой вёрстки страниц и компонентов интерфейса Bootstrap 5 (CDN). | Bootstrap 5, HTML, CSS | Актуален |
 | **07** | [07_json_server_example](./07_json_server_example) | Быстрое развёртывание мок-сервера REST API на базе JSON-файла. | Node.js, json-server | Актуален |
 | **08** | [08_themization_example](./08_themization_example) | Реализация динамического переключения тем оформления (light, dark, blue, pink). | JavaScript, CSS, HTML | Актуален |
